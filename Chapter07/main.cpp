@@ -72,7 +72,7 @@ int main()
         ss << "Score: " << score << "   Lives: " << lives;
         hud.setString(ss.str());
 
-        //handle ball hitting the bottom
+        //Handle ball hitting the bottom
         if (ball.getPosition().top > window.getSize().y)
         {
             ball.reboundBottom();
