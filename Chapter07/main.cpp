@@ -16,7 +16,7 @@ int main()
     int score = 0;
     int lives = 3;
 
-    Bat bat(1920 / 2, 1080 - 20);
+    Bat bat(1920 / 2.0, 1080 - 20);
     Ball ball(1920 / 2, 0);
 
     Text hud;
