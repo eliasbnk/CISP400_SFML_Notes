@@ -178,10 +178,12 @@ int main()
     healthBar.setPosition(450, 980);
 
     // When did we last update the HUD?
-    int framesSinceLastHUDUpdate = 0;
+    ///int framesSinceLastHUDUpdate = 0;
     // How often (in frames) should we update the HUD
-    int fpsMeasurementFrameInterval = 1000;
+    ///int fpsMeasurementFrameInterval = 1000;
 
+    int msSinceLastHUDUpdate = 0;
+    int msMeasurementFrameInterval = 1000;
 
     // Prepare the hit sound
     SoundBuffer hitBuffer;
@@ -563,9 +565,10 @@ int main()
             // size up the health bar
             healthBar.setSize(Vector2f(player.getHealth() * 3, 50));
             // Increment the number of frames since the previous update
-            framesSinceLastHUDUpdate++;
+            ///framesSinceLastHUDUpdate++;
+            msSinceLastHUDUpdate += dt.asMilliseconds();
             // re-calculate every fpsMeasurementFrameInterval frames
-            if (framesSinceLastHUDUpdate > fpsMeasurementFrameInterval)
+            if (msSinceLastHUDUpdate > msMeasurementFrameInterval)
             {
                 // Update game HUD text
                 std::stringstream ssAmmo;
@@ -588,7 +591,7 @@ int main()
                 // Update the high score text
                 ssZombiesAlive << "Zombies:" << numZombiesAlive;
                 zombiesRemainingText.setString(ssZombiesAlive.str());
-                framesSinceLastHUDUpdate = 0;
+                msSinceLastHUDUpdate = 0;
             }// End HUD update
 
 
