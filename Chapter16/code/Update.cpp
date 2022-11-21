@@ -34,8 +34,6 @@ void Engine::update(float dtAsSeconds)
 		// Update Bob
 		m_Bob.update(dtAsSeconds);
 
-		cout << m_Bob.getPosition().top << endl;
-
 		// Let bob and thomas jump on each others heads
 		if (m_Bob.getFeet().intersects(m_Thomas.getHead()))
 		{

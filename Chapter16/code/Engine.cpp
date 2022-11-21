@@ -10,7 +10,7 @@ Engine::Engine()
 
 	m_Window.create(VideoMode(resolution.x, resolution.y),
 		"Thomas was late",
-		Style::Default);
+		Style::Fullscreen);
 
 	// Initialize the full screen view
 	m_MainView.setSize(resolution);
