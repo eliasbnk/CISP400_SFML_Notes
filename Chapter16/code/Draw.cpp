@@ -39,6 +39,9 @@ void Engine::draw()
 		// Switch to m_LeftView
 		m_Window.setView(m_LeftView);
 
+		// Draw the Level
+		m_Window.draw(m_VALevel, &m_TextureTiles);
+
 		// Draw bob
 		m_Window.draw(m_Bob.getSprite());
 		// Draw thomas
