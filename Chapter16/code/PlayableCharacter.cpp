@@ -55,7 +55,7 @@ void PlayableCharacter::update(float elapsedTime)
     m_Head.left = r.left;
     m_Head.top = r.top + (r.height * .3);
     m_Head.width = r.width;
-    m_Head.height = 10;
+    m_Head.height = 15;
     // Right
     m_Right.left = r.left + r.width - 2;
     m_Right.top = r.top + r.height * .35;
