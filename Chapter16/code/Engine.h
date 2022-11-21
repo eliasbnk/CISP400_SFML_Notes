@@ -5,6 +5,8 @@
 #include "Thomas.h"
 #include "Bob.h"
 
+#include <iostream>
+using namespace std;
 using namespace sf;
 
 class Engine
