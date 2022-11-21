@@ -14,11 +14,6 @@ void Engine::update(float dtAsSeconds)
 
 	if (m_Playing)
 	{
-		// Update Thomas
-		m_Thomas.update(dtAsSeconds);
-		// Update Bob
-		m_Bob.update(dtAsSeconds);
-
 		// Count down the time the player has left
 		m_TimeRemaining -= dtAsSeconds;
 
@@ -33,6 +28,11 @@ void Engine::update(float dtAsSeconds)
 			// Run bobs collision detection
 			detectCollisions(m_Bob);
 		}
+
+		// Update Thomas
+		m_Thomas.update(dtAsSeconds);
+		// Update Bob
+		m_Bob.update(dtAsSeconds);
 
 		// Let bob and thomas jump on each others heads
 		if (m_Bob.getFeet().intersects(m_Thomas.getHead()))

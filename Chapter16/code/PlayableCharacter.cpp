@@ -110,7 +110,6 @@ void PlayableCharacter::stopFalling(float position)
 }
 void PlayableCharacter::stopRight(float position)
 {
-
     m_Position.x = position - m_Sprite.getGlobalBounds().width;
     m_Sprite.setPosition(m_Position);
 }

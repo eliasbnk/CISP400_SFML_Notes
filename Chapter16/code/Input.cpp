@@ -7,8 +7,6 @@ void Engine::input()
 	{
 		if (event.type == Event::KeyPressed)
 		{
-			
-
 			// Handle the player quitting
 			if (Keyboard::isKeyPressed(Keyboard::Escape))
 			{
