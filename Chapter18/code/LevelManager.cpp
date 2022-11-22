@@ -42,7 +42,7 @@ int** LevelManager::nextLevel(VertexArray& rVaLevel)
     case 4:
         levelToLoad = "levels/level4.txt";
         m_StartPosition.x = 50;
-        m_StartPosition.y = 200;
+        m_StartPosition.y = 170;
         m_BaseTimeLimit = 50.0f;
         break;
     }// End switch
